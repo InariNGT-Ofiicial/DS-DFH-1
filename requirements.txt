@@ -1,0 +1,8 @@
+# The film itself needs four things. Nothing here is pinned hard, because the rendering is pure PIL
+# and the arithmetic is numpy - both are stable across minor versions.
+Pillow>=10.0          # every drawn pixel; the whole kit is PIL
+numpy>=1.24           # audio analysis (BPM calibration) and the A/B metrics in tools/
+
+# tools/analyze.py and tools/calib.py read the song. If you already have the stem as wav you can skip
+# this; ffmpeg (below, not a Python package) covers the mp3 -> wav step too.
+soundfile>=0.12       # only for tools/analyze.py when reading a compressed source

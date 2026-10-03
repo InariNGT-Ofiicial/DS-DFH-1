@@ -1,0 +1,20 @@
+# 统一换行符：仓库内一律 LF，检出时按平台
+# 避免 Windows 上编辑后整文件 diff 噪音
+* text=auto eol=lf
+
+# 二进制：不做换行转换，也不参与文本 diff
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
+*.ttf binary
+*.otf binary
+
+# Windows 专用脚本（若有）保持 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# 锁定语言统计：避免 GitHub 把仓库判成别的语言
+*.py   linguist-language=Python
+*.json linguist-language=JSON

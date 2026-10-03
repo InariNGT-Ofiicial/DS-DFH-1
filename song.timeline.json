@@ -1,0 +1,309 @@
+{
+ "source_sha256": "8a9414610a7dd06121bbe8ff2812a029ed0eeda0fc19db20b5200cd894e7054b",
+ "note": "times and per-line digests only; the lyric text is composed on the user's own machine",
+ "bpm": 72.0721,
+ "beat": 0.8325,
+ "first_line": 1.36,
+ "lines": [
+  {
+   "t": 1.36,
+   "end": 4.82,
+   "sha256": "32b8082f40bd04e423855adb1a183fa330edcb82aa01feb964bf2177b451cc8b",
+   "kind": "sing"
+  },
+  {
+   "t": 4.82,
+   "end": 8.15,
+   "sha256": "8f9a5018916b077051f386c54e84fd750936e15ac991392e9c7a88ca04917515",
+   "kind": "sing"
+  },
+  {
+   "t": 8.15,
+   "end": 11.48,
+   "sha256": "c70a51fa2c60f0e84ba83e76053b2e67fa0d8853486f021fc9b71b727bd75ff0",
+   "kind": "sing"
+  },
+  {
+   "t": 11.48,
+   "end": 14.72,
+   "sha256": "c1c6c67cb036e476e375927e5ec1224ced2fe9d4723c5fef5c5761fb439a147c",
+   "kind": "sing"
+  },
+  {
+   "t": 14.72,
+   "end": 18.0,
+   "sha256": "b78b844089c7bc1b3e08a2e13f8c6624342c4967de6f6aa059ab8a232640675b",
+   "kind": "sing"
+  },
+  {
+   "t": 18.0,
+   "end": 21.31,
+   "sha256": "9e55302ca119cdf295d61b48bfa0b716e4412dd6af4d868d24eb14fc1594bd87",
+   "kind": "sing"
+  },
+  {
+   "t": 21.31,
+   "end": 24.59,
+   "sha256": "9d63a508d44055282fe11baddc879886de228481e765b114d3b3ec1e30dc93c2",
+   "kind": "sing"
+  },
+  {
+   "t": 24.59,
+   "end": 29.18,
+   "sha256": "bfc7e2698f5d43527b82d23c323b3f38ea118672635c81ba2af4a2db723f0646",
+   "kind": "sing"
+  },
+  {
+   "t": 29.18,
+   "end": 32.72,
+   "sha256": "a5f4107ff4113991182b9748c8454e02ab7a189560fd2fe7910408faada18eaa",
+   "kind": "sing"
+  },
+  {
+   "t": 32.72,
+   "end": 35.74,
+   "sha256": "8099514e551bd0f440401d1b08b5578c3730ecf445121fd829c66945b3288074",
+   "kind": "sing"
+  },
+  {
+   "t": 35.74,
+   "end": 39.85,
+   "sha256": "e68dbea79c71825de4efec5084a1a5677a2d9196a57e36a025e0079fc552c6fc",
+   "kind": "sing"
+  },
+  {
+   "t": 39.85,
+   "end": 42.32,
+   "sha256": "23a13b5e9b0ef2a5e7723b64b109c7cf1add9e171c6b3d3a42aadeb3858653ea",
+   "kind": "sing"
+  },
+  {
+   "t": 42.32,
+   "end": 45.84,
+   "sha256": "f5aced77c1a622869d2d4e508e2dac3095a30f84ce19cdbbd5a0b02a7357def5",
+   "kind": "sing"
+  },
+  {
+   "t": 45.84,
+   "end": 49.11,
+   "sha256": "06a4fe26d55a2a59e96da7c7d9a76c1d6ee4e3f95aa32ca121fee12429a00b5c",
+   "kind": "sing"
+  },
+  {
+   "t": 49.11,
+   "end": 50.8,
+   "sha256": "388cf4fd0da25b6f03e73826a160e26907e18470b4a7471ace6d17be336e0e48",
+   "kind": "sing"
+  },
+  {
+   "t": 50.8,
+   "end": 58.62,
+   "sha256": "d8d4e053f908ffb9a7e077114a1f82b1994fbd3a4764816d5181ce7338de6c7c",
+   "kind": "sing"
+  },
+  {
+   "t": 58.62,
+   "end": 62.11,
+   "sha256": "83b082900e01e7384c09fc7d36c2ae6b7c51cd0fa2b7ee50b3730497bc79d266",
+   "kind": "sing"
+  },
+  {
+   "t": 62.11,
+   "end": 65.43,
+   "sha256": "bcac0cb3ccbd4b420c62eb551d84b8b62e6c83fdce33ddd29c2354e9c957b3a1",
+   "kind": "sing"
+  },
+  {
+   "t": 65.43,
+   "end": 68.73,
+   "sha256": "3438a572d9f47c50ef2503f8d5547112d0e69d7ea7a2f15966fed78875284ba5",
+   "kind": "sing"
+  },
+  {
+   "t": 68.73,
+   "end": 71.92,
+   "sha256": "543c88ea8ae67eaf9390c1ce91c7911052b3c7fea7eef4e0d715170002fc6c6b",
+   "kind": "sing"
+  },
+  {
+   "t": 71.92,
+   "end": 75.25,
+   "sha256": "ef2f3a80e13622c405e9dd73004e85a95de9fac9b8bfb6e8473182e8d5b7d212",
+   "kind": "sing"
+  },
+  {
+   "t": 75.25,
+   "end": 78.53,
+   "sha256": "cacfa05c001b0e138047145ef206f1e5d760ed737ce4f94d86496c54cb37ce2c",
+   "kind": "sing"
+  },
+  {
+   "t": 78.53,
+   "end": 81.85,
+   "sha256": "263ec162a7341a7a549aa0657d20205f8717bb64b6547544382e1656b02a7fbc",
+   "kind": "sing"
+  },
+  {
+   "t": 81.85,
+   "end": 86.51,
+   "sha256": "135c04f454bfd701d028c90fd3f78ab4f35fcb4951064bf7f66d3fea2abdbd13",
+   "kind": "sing"
+  },
+  {
+   "t": 86.51,
+   "end": 93.04,
+   "sha256": "7b6ac88d5e368c460d20368a26208ae29ff4deb69330c9937799c45d2306b2ca",
+   "kind": "sing"
+  },
+  {
+   "t": 93.04,
+   "end": 99.48,
+   "sha256": "768220c3c1128c5a2fdc19c8847c07cf360eb96d80fa84edb4f9df57954dc64b",
+   "kind": "sing"
+  },
+  {
+   "t": 99.48,
+   "end": 103.05,
+   "sha256": "8413bee83dcf3b79dd3ed7c58fbb3d716b9d7b77f6e9012b0ff845da17f392bb",
+   "kind": "sing"
+  },
+  {
+   "t": 103.05,
+   "end": 106.38,
+   "sha256": "bba7c463199bd353652edf3a610b23556ad90fd5381f24c17aae45e09dc44da7",
+   "kind": "sing"
+  },
+  {
+   "t": 106.38,
+   "end": 109.66,
+   "sha256": "8337cdff7c35984425ca969e3f679f24dd8f06dab41d3367d5aa8fffcde1bcc5",
+   "kind": "sing"
+  },
+  {
+   "t": 109.66,
+   "end": 114.66,
+   "sha256": "97a638b416872c1baa443fa5ee3447ada08b900e7d0c868eb56bfcee192b6d6d",
+   "kind": "sing"
+  },
+  {
+   "t": 114.66,
+   "end": 170.01,
+   "sha256": "e46910ec9037b4ece9283e50a49cf2db663a96bda4ac2d108f1976be072da692",
+   "kind": "step"
+  },
+  {
+   "t": 170.01,
+   "end": 173.53,
+   "sha256": "b5dfcc9da032b4d5a4537a72ef3c8a6569d408fb657c5f793f281d8c89958a29",
+   "kind": "sing"
+  },
+  {
+   "t": 173.53,
+   "end": 176.41,
+   "sha256": "d292f718a71749334e18b105eab7c2716a35dcb14998e40f37fc6251a03ccd22",
+   "kind": "sing"
+  },
+  {
+   "t": 176.41,
+   "end": 179.39,
+   "sha256": "5250ee462b05fd5a97fbbaaf1e5a3da65fe5a9c4f1f7919df6c2400e8225f448",
+   "kind": "sing"
+  },
+  {
+   "t": 179.39,
+   "end": 183.0,
+   "sha256": "4e2ebc4d6e412831af27deaa6f650a26ee810b2bf5e316398a855cd0c88e052c",
+   "kind": "sing"
+  },
+  {
+   "t": 183.0,
+   "end": 186.44,
+   "sha256": "a69b270b0b9cbcb9a73e653b0fae350607036be55dec1a42427ed5207c20f10f",
+   "kind": "sing"
+  },
+  {
+   "t": 186.44,
+   "end": 189.86,
+   "sha256": "06a4fe26d55a2a59e96da7c7d9a76c1d6ee4e3f95aa32ca121fee12429a00b5c",
+   "kind": "sing"
+  },
+  {
+   "t": 189.86,
+   "end": 193.11,
+   "sha256": "03ac343cbebb71726b0b8ab097e334fe68949a08a0c2bb56df8609f233efb0c7",
+   "kind": "sing"
+  },
+  {
+   "t": 193.11,
+   "end": 197.15,
+   "sha256": "1137542453f6c62ac0b2159519cbf916e19a2ebb36cf8f057efc7e7eaaeed0c8",
+   "kind": "sing"
+  },
+  {
+   "t": 197.15,
+   "end": 263.21,
+   "sha256": "e46910ec9037b4ece9283e50a49cf2db663a96bda4ac2d108f1976be072da692",
+   "kind": "step"
+  },
+  {
+   "t": 263.21,
+   "end": 266.74,
+   "sha256": "b5dfcc9da032b4d5a4537a72ef3c8a6569d408fb657c5f793f281d8c89958a29",
+   "kind": "sing"
+  },
+  {
+   "t": 266.74,
+   "end": 269.78,
+   "sha256": "b5ec0c7ebc04910ea74bd075f22c74cfbd8e91cfbb874bd6fc11deed3011b006",
+   "kind": "sing"
+  },
+  {
+   "t": 269.78,
+   "end": 272.73,
+   "sha256": "b7a7bd407b4468950c3deec56601266659508150f249b062b313921c5040a93a",
+   "kind": "sing"
+  },
+  {
+   "t": 272.73,
+   "end": 276.24,
+   "sha256": "81f0deeea105627c3aef064d19f9fe0a5d047d27f9b99d1dea3ed18b01460dd4",
+   "kind": "sing"
+  },
+  {
+   "t": 276.24,
+   "end": 279.77,
+   "sha256": "cbb65efb7df0e1035833b5ef913457f4f3ab014739fca252e4767496c1a2fb17",
+   "kind": "sing"
+  },
+  {
+   "t": 279.77,
+   "end": 282.98,
+   "sha256": "8d6174c9164ec73c23359cd1017223925f307f288b4ed3ce61ff2394f3e95c47",
+   "kind": "sing"
+  },
+  {
+   "t": 282.98,
+   "end": 285.29,
+   "sha256": "640e05f04cec839f4410fe684ade55ed843e51a1993f3a052d9e61e772cae199",
+   "kind": "sing"
+  },
+  {
+   "t": 285.29,
+   "end": 291.76,
+   "sha256": "06339a672f07ad94d77fa61f12dd0ef90d0e3a51fa22ae9f475dfda6b71dcc1d",
+   "kind": "sing"
+  },
+  {
+   "t": 291.76,
+   "end": 297.78,
+   "sha256": "265f85a780088e0cbc53a9dc753f7f35e3bc51135b3cafeeebe61d8ae161177c",
+   "kind": "step"
+  },
+  {
+   "t": 297.78,
+   "end": 300.78,
+   "sha256": "385784f7b194c11d9bbb971380e60d0a1136a7585dbd143564eb102fe8a0b85f",
+   "kind": "step"
+  }
+ ]
+}

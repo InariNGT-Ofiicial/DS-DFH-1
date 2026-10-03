@@ -1,0 +1,44 @@
+# ---- 版权件：绝不入库 ----
+# 歌曲音频（版权归音乐权利人所有，请自行准备）
+audio/
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.aac
+*.ogg
+
+# 歌词原文（LRC / 明文歌词，随歌曲一起受版权保护）
+work/lines.local.json
+work/lines*.json
+*.lrc
+
+# 成片与母版（体积大，且含音频）
+out/
+*.mp4
+*.mkv
+*.mov
+*.webm
+*.gif
+
+# ---- 构建产物：可再生成，不入库 ----
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+work/cache/
+work/frames/
+*.log
+
+# ---- 环境与编辑器 ----
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 允许入库的例外 ----
+# work/map/china_full.json —— 地图数据带审图号，属可公开分发件
+!work/map/china_full.json
