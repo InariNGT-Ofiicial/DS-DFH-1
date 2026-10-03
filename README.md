@@ -15,6 +15,11 @@ China's first satellite. Every frame is a pure function of song time, drawn enti
 no footage, no imported artwork. Bring your own copy of the song, then run `python build.py all`.
 The code is MIT; the song, the lyrics and the fonts are not included (see [NOTICE.md](NOTICE.md)).*
 
+```bash
+git clone https://github.com/InariNGT-Ofiicial/DS-DFH-1.git
+cd DS-DFH-1 && pip install -r requirements.txt
+```
+
 ---
 
 ## 这是什么
