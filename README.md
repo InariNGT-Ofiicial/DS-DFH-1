@@ -106,8 +106,10 @@ tools/         标定与验收工具
   sheets_sec07.py 07 段分镜三表快照
   contact.py     抽帧贴联系表
 docs/          文档
-  DEVLOG.md      工程日志：整个过程、犯过的错、改掉的判断
+  DEVLOG.md      工程日志：整个过程、犯过的错、改掉的判断（含发布工程）
   HOW_IT_WORKS.md 流水线是怎么运作的
+  MAKING_BLOCKS.md 用色块画事件：网格、零件库、怎么新画一个
+  CRAFT.md       文案与表现手法：slogan 选句、「炫」的量化归因、尾焰
   PORTING.md     与原稿的差异台账（含未核实项）
   FONTS.md       字体清单与替代方案
 research/      前期研究（逆向、创意分析、取证、复现）

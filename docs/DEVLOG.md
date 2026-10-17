@@ -388,6 +388,106 @@ while len(txt) > 4 and textlength > avail:
 
 ---
 
+## 14. 发布工程：把一个工作区变成能给别人跑的仓库
+
+片子做完之后的事，最容易漏记——因为它不在「创作」里。但这一段的坑**最贵**：
+它们全都属于「本机跑得通，别人跑不通」这一类，而且**不会在你自己机器上暴露**。
+
+### 14.1 可移植性改造：八处
+
+把工程从 `_sr/`（本工作区）搬到独立仓库，要断开所有「只有这台机器成立」的假设：
+
+| # | 原状 | 现状 |
+|---|---|---|
+| 1 | `tuikit.py` 里 `MV` / `EXPR_DIR` / `EXPRS` 指向参考项目的立绘 `whale-*.webp` | **全删**（本片零外部图像素材） |
+| 2 | 三个图元函数按*表情名*查表：`conv_maps(expr, crop, ...)` | 改为**接收图像** `conv_maps(src, ...)` |
+| 3 | 零调用残留 `halfblock_lum()` / `halfblock()` | 删除 |
+| 4 | ffmpeg 路径硬编码 `SR.parent/_tools/ffmpeg/...` | `PV_FFMPEG` → `shutil.which("ffmpeg")` → 兜底 |
+| 5 | 音频路径硬编码 | `PV_SONG` → `audio/song.mp3` |
+| 6 | 字体路径硬编码 Consolas | 全部 `PV_F_*` 可覆盖 + 系统默认 |
+| 7 | 歌词直接读本工作区 | `PV_LINES` + **sha256 逐行校验** |
+| 8 | 无 LRC 入口 | 新增 `tools/lrc.py`（.lrc → `lines.local.json`） |
+
+> **判断标准**：把这台机器上不存在的两样东西（歌、歌词）拿掉，
+> 剩下的还能不能 `import`？不能就说明还有硬依赖没断。
+
+### 14.2 版权边界的机制，而不是口号
+
+「不含歌词」不能靠人记，要靠**结构**：
+
+- 仓库只存 `song.timeline.json`：50 行的**起止时间 + 每行 sha256**；
+- 用户自备歌词 → `pvclock.py` **逐行比对 sha256**，对不上**直接退出**；
+- 于是**不可能**出现「拿 A 版歌词配 B 版时间」的静默错位。
+
+代价也已写明：没有歌词文件时**连 `import` 都过不去**（词级时间轴在模块级被需要）。
+**这是刻意选的**：干净剥离版权 > 开箱即跑。
+
+### 14.3 ★ 一个许可证被识别失败的原因
+
+GitHub 起初把仓库的许可判成 **`NOASSERTION / Other`**，而不是 MIT。
+
+原因不在正文，在**正文之后**：为了写清「本许可证只覆盖代码」，在标准 MIT 全文后面
+追加了一段范围说明。**许可识别器遇到非标准内容就放弃识别**，整份判为「其他」。
+
+**修法**：`LICENSE` 只留 MIT 标准正文，范围说明搬到 `NOTICE.md`（它本来就是干这个的）。
+改完立刻识别为 `MIT`。
+
+> **教训：许可证文件是给机器读的，NOTICE 才是给人读的。** 别在许可证里加解释。
+
+### 14.4 ★★ git 凭据助手是「累加」的
+
+沙箱里 `git push` 第一次直接失败：`could not read Username，terminal prompts disabled`——
+非交互环境，弹不出凭据窗口。解法是用能**读系统凭据库**的 `wincred`：
+
+```bash
+git -c credential.helper=wincred push -u origin main
+```
+
+但把它写进配置后，**裸 `git push` 反而挂死**。原因：
+
+> **`credential.helper` 是列表，不是单值。局部设置会「附加」在全局之后，不会覆盖。**
+
+全局本来就有两条（`helper-selector` + `git-credential-manager.exe`）。
+局部再加一条 `wincred`，实际顺序是 GCM 先跑 → 它照样尝试交互 → 卡住。
+
+**正确写法是先清空再设**：
+
+```bash
+git config --local --add credential.helper ""        # 清掉继承来的
+git config --local --add credential.helper wincred   # 只留这一条
+```
+
+改完裸 `git push` 秒回 `Everything up-to-date`。
+
+### 14.5 推送前的三道关
+
+版权件一旦进了历史，**删掉文件也删不掉历史**。所以顺序必须是「先验拦截，再暂存」：
+
+1. **造诱饵**：放几个假文件（`audio/song.mp3`、`work/lines.local.json`、`work/*.lrc`），
+   用 `git check-ignore -q` 逐个确认 `.gitignore` **真的**拦得住；
+2. `git add -A`，然后 `git diff --cached --name-only` 看**实际**清单；
+3. 再 `grep -Ei "\.mp3|\.wav|\.mp4|\.mkv|lines.*json|\.lrc$"` 复查暂存区，**空才提交**。
+
+最终 52 个文件，无音频、无歌词、无成片。
+
+### 14.6 元数据：两个小坑
+
+- **topics 不能用 `PATCH /repos/{o}/{r}` 设置**，要单独 `PUT /repos/{o}/{r}/topics`，
+  否则返回 200 但 `topics` 仍为空。
+- **`.gitattributes` 要先于首次提交**：`* text=auto eol=lf` 能消掉 Windows 上的 CRLF 警告，
+  否则每个 `git add` 都刷一屏 warning。
+
+### 14.7 发布后的自检
+
+```
+git rev-parse HEAD origin/main     # 本地与远程必须同一个 commit
+git ls-tree -r --name-only origin/main | wc -l   # 远程实际收到的文件数
+```
+
+再对仓库页发一次**匿名**请求（不带 token），确认 `HTTP 200` —— 别人能打开，才算真发布。
+
+---
+
 ## 附：这份日志自己的一条纪律
 
 上面每一处「坑」都写了**当时判断错在哪、后来怎么改的**。
